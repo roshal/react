@@ -1,0 +1,22 @@
+root: true
+parser: babel-eslint
+extends: eslint:recommended
+env:
+ node: true
+rules:
+ comma-dangle:
+  - error
+  - always-multiline
+ indent:
+  - error
+  - tab
+ no-mixed-spaces-and-tabs:
+  - error
+ no-unused-vars:
+  - warn
+ quotes:
+  - warn
+  - single
+ semi:
+  - error
+  - never
