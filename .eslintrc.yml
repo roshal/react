@@ -1,21 +1,31 @@
 root: true
 parser: babel-eslint
-extends: eslint:recommended
+extends:
+ - eslint:recommended
 env:
  browser: true
 rules:
+ no-console:
+  - off
+ no-unused-vars:
+  - off
  comma-dangle:
   - error
-  - always-multiline
+  -
+    arrays: always-multiline
+    exports: always-multiline
+    functions: always-multiline
+    imports: always-multiline
+    objects: always-multiline
  indent:
   - error
   - tab
+ new-parens:
+  - error
  no-mixed-spaces-and-tabs:
   - error
- no-unused-vars:
-  - warn
  quotes:
-  - warn
+  - error
   - single
  semi:
   - error

@@ -8,10 +8,10 @@ scripts:
  #
  lint: eslint .
  #
- webpack-develop: webpack --env.develop
- webpack-produce: webpack --env.produce
- webpack-server-develop: webpack-dev-server --hot --env.develop
- webpack-server-produce: webpack-dev-server --hot --env.produce
+ webpack-develop: webpack --progress --env.develop --mode development
+ webpack-produce: webpack --progress --env.produce --mode production
+ webpack-server-develop: webpack-dev-server --hot --progress --env.develop --mode development
+ webpack-server-produce: webpack-dev-server --hot --progress --env.produce --mode production
  #
  develop: nps clean-output webpack-develop
  produce: nps clean-public webpack-produce

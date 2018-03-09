@@ -1,7 +1,13 @@
-import extract_text_webpack_plugin from 'extract-text-webpack-plugin'
+import package__extract_text_webpack_plugin from 'extract-text-webpack-plugin'
+import {
+	join as package__path__join,
+} from 'path'
+import {
+	PrefetchPlugin as package__webpack__prefetch_plugin,
+} from 'webpack'
 //
 export default (env) => {
-	const plugin = new extract_text_webpack_plugin({
+	const plugin = new package__extract_text_webpack_plugin({
 		allChunks: env.produce,
 		filename: '[name].css',
 		ignoreOrder: true,
@@ -49,6 +55,7 @@ export default (env) => {
 			],
 		},
 		plugins: [
+			new package__webpack__prefetch_plugin(package__path__join(__dirname, '..', 'source'), './styles/common.sass'),
 			plugin,
 		],
 	}

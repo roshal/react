@@ -1,0 +1,19 @@
+{
+	"background_color": "#000",
+	"display": "standalone",
+	"icons": [
+		{
+			"sizes": "64x64 16x16",
+			"src": "favicon.ico",
+			"type": "image/x-icon"
+		},
+		{
+			"sizes": "256x256",
+			"src": "favicon.png",
+			"type": "image/png"
+		}
+	],
+	"name": "React App Sample",
+	"start_url": "/",
+	"theme_color": "#000"
+}

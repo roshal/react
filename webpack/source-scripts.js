@@ -25,14 +25,14 @@ export default (env) => {
 								],
 							},
 						},
-						// {
-						// 	loader: 'eslint',
-						// 	options: {
-						// 		configFile: '.eslintrc.yml',
-						// 		ignore: false,
-						// 		useEslintrc: false,
-						// 	},
-						// },
+						//	{
+						//		loader: 'eslint',
+						//		options: {
+						//			configFile: '.eslintrc.yml',
+						//			ignore: false,
+						//			useEslintrc: false,
+						//		},
+						//	},
 					],
 				},
 			],

@@ -1,5 +1,5 @@
 import {
-	join as path__join,
+	join as package__path__join,
 } from 'path'
 //
 export default () => {
@@ -9,7 +9,7 @@ export default () => {
 		},
 		devtool: 'cheap-module-source-map',
 		output: {
-			path: path__join(__dirname, '../output'),
+			path: package__path__join(__dirname, '..', 'output'),
 		},
 	}
 }

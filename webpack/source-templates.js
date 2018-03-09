@@ -1,3 +1,10 @@
+import {
+	PrefetchPlugin as package__webpack__prefetch_plugin,
+} from 'webpack'
+import {
+	join as package__path__join,
+} from 'path'
+//
 export default (env) => {
 	return {
 		module: {
@@ -25,5 +32,8 @@ export default (env) => {
 				},
 			],
 		},
+		plugins: [
+			new package__webpack__prefetch_plugin(package__path__join(__dirname, '..', 'source'), './templates/index.pug'),
+		],
 	}
 }
