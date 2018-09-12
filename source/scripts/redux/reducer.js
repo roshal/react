@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 //
-import module__reducers__list from './reducers/list'
+import m__reducers__list from './reducers/list'
 //
 export default combineReducers({
-	module__reducers__list,
+	m__reducers__list,
 })
 //	import article from './reducers/article'
 //	import articleList from './reducers/articleList'

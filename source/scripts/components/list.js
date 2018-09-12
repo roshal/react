@@ -1,18 +1,18 @@
-import package__react_hyperscript from 'react-hyperscript'
+import p__react_hyperscript from 'react-hyperscript'
 import {
-	Component as package__react__component,
+	Component as p__react__component,
 } from 'react'
 import {
-	connect as package__react_redux__connect,
+	connect as p__react_redux__connect,
 } from 'react-redux'
 import {
-	bindActionCreators as package__redux__bind_action_creators,
+	bindActionCreators as p__redux__bind_action_creators,
 } from 'redux'
 //
-import * as module__actions__ from '../redux/actions'
+import * as m__actions__ from '../redux/actions'
 //
-const $ = package__react_hyperscript
-const source = class extends package__react__component {
+const $ = p__react_hyperscript
+const source = class extends p__react__component {
 	state = {
 		id: '',
 		newItemKey: '',
@@ -99,7 +99,7 @@ const source = class extends package__react__component {
 		return [
 			$('div.app', [
 				$('div.app__list.list', [
-					this.items(this.props.module__reducers__list.items),
+					this.items(this.props.m__reducers__list.items),
 				]),
 				$('form', [
 					$('label.app__key-label', [
@@ -135,10 +135,10 @@ const map_to_props_state = (state) => {
 }
 const map_to_props_dispatch = (dispatch) => {
 	return {
-		tableActions: package__redux__bind_action_creators(module__actions__, dispatch)
+		tableActions: p__redux__bind_action_creators(m__actions__, dispatch)
 	}
 }
-const connection = package__react_redux__connect(
+const connection = p__react_redux__connect(
 	map_to_props_state,
 	map_to_props_dispatch,
 )

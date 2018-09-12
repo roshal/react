@@ -1,20 +1,20 @@
-import package__redux_thunk from 'redux-thunk'
+import p__redux_thunk from 'redux-thunk'
 import {
-	applyMiddleware as package__redux__apply_middleware,
-	createStore as package__redux__create_store,
+	applyMiddleware as p__redux__apply_middleware,
+	createStore as p__redux__create_store,
 } from 'redux'
 import {
-	createLogger as package__redux_logger__create_logger,
+	createLogger as p__redux_logger__create_logger,
 } from 'redux-logger'
 //
-import module__reducers__reducer from './reducer'
+import m__reducers__reducer from './reducer'
 //
-const logger = package__redux_logger__create_logger()
+const logger = p__redux_logger__create_logger()
 export default (state) => {
-	return package__redux__create_store(
-		module__reducers__reducer,
+	return p__redux__create_store(
+		m__reducers__reducer,
 		state,
-		package__redux__apply_middleware(package__redux_thunk, logger),
+		p__redux__apply_middleware(p__redux_thunk, logger),
 	)
 }
 //	import createHistory from 'history/createBrowserHistory'

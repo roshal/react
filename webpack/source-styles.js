@@ -40,7 +40,7 @@ export default (env) => {
 											removeAll: true,
 										},
 									} : false,
-									sourceMap: env.develop,
+									// sourceMap: env.develop,
 								},
 							},
 							{

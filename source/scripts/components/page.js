@@ -1,16 +1,16 @@
-import package__lodash_fp from 'lodash/fp'
-import package__react_hyperscript from 'react-hyperscript'
+import p__lodash_fp from 'lodash/fp'
+import p__react_hyperscript from 'react-hyperscript'
 import {
-	Component as package__react__component,
+	Component as p__react__component,
 } from 'react'
 import {
-	Link as package__react_router_dom__link,
+	Link as p__react_router_dom__link,
 } from 'react-router-dom'
 //
-import module__list from './list'
+import m__list from './list'
 //
-const $ = package__react_hyperscript
-export default class extends package__react__component {
+const $ = p__react_hyperscript
+export default class extends p__react__component {
 	state = {
 		sequence: [
 			'hello',
@@ -25,18 +25,18 @@ export default class extends package__react__component {
 		return [
 			$('ul.list', [
 				$('li', [
-					$(package__react_router_dom__link, {
+					$(p__react_router_dom__link, {
 						to: '/component',
 					}, [
 						'page-component',
 					]),
 				]),
 				$('li', [
-					package__lodash_fp.join(' ')(this.state.sequence),
+					p__lodash_fp.join(' ')(this.state.sequence),
 				]),
 				$('li', [
 					$('div.container', [
-						$(module__list),
+						$(m__list),
 					]),
 				]),
 			]),

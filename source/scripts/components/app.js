@@ -1,37 +1,37 @@
-import package__react_hyperscript from 'react-hyperscript'
+import p__react_hyperscript from 'react-hyperscript'
 import {
-	Component as package__react__component,
+	Component as p__react__component,
 } from 'react'
 import {
-	Provider as package__react_redux__provider,
+	Provider as p__react_redux__provider,
 } from 'react-redux'
 import {
-	BrowserRouter as package__react_router_dom__browser_router,
-	Route as package__react_router_dom__route,
+	BrowserRouter as p__react_router_dom__browser_router,
+	Route as p__react_router_dom__route,
 } from 'react-router-dom'
 //
-import module__page from './page'
-import module__page_component from './page-component'
-import module__redux__store from '../redux/store'
+import m__page from './page'
+import m__page_component from './page-component'
+import m__redux__store from '../redux/store'
 //
-const $ = package__react_hyperscript
-export default class app extends package__react__component {
+const $ = p__react_hyperscript
+export default class app extends p__react__component {
 	render = () => {
 		return [
-			$(package__react_redux__provider, {
-				store: module__redux__store(),
+			$(p__react_redux__provider, {
+				store: m__redux__store(),
 			}, [
-				$(package__react_router_dom__browser_router, [
+				$(p__react_router_dom__browser_router, [
 					$('div.container', [
-						$(package__react_router_dom__route, {
+						$(p__react_router_dom__route, {
 							exact: true,
 							path: '/',
-							component: module__page,
+							component: m__page,
 						}),
-						$(package__react_router_dom__route, {
+						$(p__react_router_dom__route, {
 							exact: true,
 							path: '/component',
-							component: module__page_component,
+							component: m__page_component,
 						}),
 					]),
 				]),

@@ -1,17 +1,17 @@
-import package__react_hyperscript from 'react-hyperscript'
+import p__react_hyperscript from 'react-hyperscript'
 import {
-	render as package__react_dom__render,
+	render as p__react_dom__render,
 } from 'react-dom'
 //
-import module__components__app from './components/app'
-import module__modules__load from './modules/load'
+import m__components__app from './components/app'
+import m__modules__load from './modules/load'
 //
-const $ = package__react_hyperscript
+const $ = p__react_hyperscript
 const container = document.createElement('div')
-package__react_dom__render(
-	$(module__components__app),
+p__react_dom__render(
+	$(m__components__app),
 	container,
 )
-module__modules__load(document, (element) => {
+m__modules__load(document, (element) => {
 	element.body.appendChild(container)
 })
