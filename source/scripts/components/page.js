@@ -1,15 +1,18 @@
-import p__lodash_fp from 'lodash/fp'
-import p__react_hyperscript from 'react-hyperscript'
+//
+import p__lodash_fp from '~/lodash/fp'
+import p__react_hyperscript from '~/react-hyperscript'
+//
 import {
 	Component as p__react__component,
-} from 'react'
+} from '~/react'
 import {
 	Link as p__react_router_dom__link,
-} from 'react-router-dom'
+} from '~/react-router-dom'
 //
-import m__list from './list'
+import m__list from '/components/list'
 //
 const $ = p__react_hyperscript
+//
 export default class extends p__react__component {
 	state = {
 		sequence: [

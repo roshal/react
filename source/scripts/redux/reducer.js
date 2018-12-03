@@ -1,6 +1,9 @@
-import { combineReducers } from 'redux'
 //
-import m__reducers__list from './reducers/list'
+import {
+	combineReducers,
+} from '~/redux'
+//
+import m__reducers__list from '/redux/reducers/list'
 //
 export default combineReducers({
 	m__reducers__list,

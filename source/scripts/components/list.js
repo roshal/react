@@ -1,15 +1,17 @@
-import p__react_hyperscript from 'react-hyperscript'
+//
+import p__react_hyperscript from '~/react-hyperscript'
+//
 import {
 	Component as p__react__component,
-} from 'react'
+} from '~/react'
 import {
 	connect as p__react_redux__connect,
-} from 'react-redux'
+} from '~/react-redux'
 import {
 	bindActionCreators as p__redux__bind_action_creators,
-} from 'redux'
+} from '~/redux'
 //
-import * as m__actions__ from '../redux/actions'
+import * as m__actions__ from '/redux/actions'
 //
 const $ = p__react_hyperscript
 const source = class extends p__react__component {
@@ -142,4 +144,5 @@ const connection = p__react_redux__connect(
 	map_to_props_state,
 	map_to_props_dispatch,
 )
+//
 export default connection(source)

@@ -1,10 +1,14 @@
-import p__react_hyperscript from 'react-hyperscript'
+//
+import '/../images/logo-react.png'
+//
+import p__react_hyperscript from '~/react-hyperscript'
+//
 import {
 	render as p__react_dom__render,
-} from 'react-dom'
+} from '~/react-dom'
 //
-import m__components__app from './components/app'
-import m__modules__load from './modules/load'
+import m__components__app from '/components/app'
+import m__modules__load from '/modules/load'
 //
 const $ = p__react_hyperscript
 const container = document.createElement('div')

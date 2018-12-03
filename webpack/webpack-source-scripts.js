@@ -1,3 +1,8 @@
+//
+import {
+	join as p__path__join,
+} from 'path'
+//
 export default (env) => {
 	return {
 		module: {
@@ -5,23 +10,29 @@ export default (env) => {
 				{
 					resource: {
 						exclude: [
-							/(?:\/|\\)node_modules(?:\/|\\)/,
+							p__path__join(__dirname, '..', 'node_modules'),
 						],
 						include: [
+							p__path__join(__dirname, '..', 'source', 'scripts'),
+						],
+						test: [
 							/\.js$/,
 						],
 					},
 					use: [
 						{
-							loader: 'babel',
+							loader: 'babel-loader',
 							options: {
-								plugins: env.produce ? [
-									'lodash',
-								] : [],
+								babelrc: false,
+								plugins: [
+									'@babel/plugin-proposal-class-properties',
+									...env.produce ? [
+										'lodash',
+									] : [],
+								],
 								presets: [
-									'env',
-									'flow',
-									'stage-2',
+									'@babel/preset-env',
+									'@babel/preset-flow',
 								],
 							},
 						},

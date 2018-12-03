@@ -1,3 +1,4 @@
+//
 export default async () => {
 	try {
 		const response = await fetch('//sregneva.now.sh/test_api/staff/', {

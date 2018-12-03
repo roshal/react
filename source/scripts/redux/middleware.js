@@ -1,11 +1,14 @@
+//
 import agent from './agent'
+//
 import {
 	ASYNC_START,
 	ASYNC_END,
 	LOGIN,
 	LOGOUT,
 	REGISTER,
-} from './constants/actionTypes'
+} from '/constants/actionTypes'
+//
 const promiseMiddleware = store => next => action => {
 	if (isPromise(action.payload)) {
 		store.dispatch({ type: ASYNC_START, subtype: action.type })

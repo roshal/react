@@ -1,15 +1,18 @@
-import p__redux_thunk from 'redux-thunk'
+//
+import p__redux_thunk from '~/redux-thunk'
+//
 import {
 	applyMiddleware as p__redux__apply_middleware,
 	createStore as p__redux__create_store,
-} from 'redux'
+} from '~/redux'
 import {
 	createLogger as p__redux_logger__create_logger,
-} from 'redux-logger'
+} from '~/redux-logger'
 //
-import m__reducers__reducer from './reducer'
+import m__reducers__reducer from '/redux/reducer'
 //
 const logger = p__redux_logger__create_logger()
+//
 export default (state) => {
 	return p__redux__create_store(
 		m__reducers__reducer,

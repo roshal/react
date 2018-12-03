@@ -1,17 +1,20 @@
-import package__webpack_merge from 'webpack-merge'
+//
+import p__webpack_merge from 'webpack-merge'
 //
 export default (env) => {
-	const configuration = (name) => {
-		const path = './webpack/' + name
+	const webpack = (name) => {
+		const path = './webpack/webpack-' + name
 		return require(path).default(env)
 	}
-	return package__webpack_merge(
-		configuration('common'),
-		configuration('source-root'),
-		configuration('source-scripts'),
-		configuration('source-styles'),
-		configuration('source-templates'),
-		env.develop ? configuration('mode-develop') : {},
-		env.produce ? configuration('mode-produce') : {},
+	return p__webpack_merge(
+		webpack('common'),
+		...env.analyze ? [webpack('mode-analyze')] : [],
+		...env.develop ? [webpack('mode-develop')] : [],
+		...env.produce ? [webpack('mode-produce')] : [],
+		webpack('source-assets'),
+		webpack('source-images'),
+		webpack('source-scripts'),
+		webpack('source-styles'),
+		webpack('source-templates'),
 	)
 }
